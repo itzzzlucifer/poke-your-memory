@@ -12,6 +12,7 @@ function App() {
   const handleDifficultyChange = (selectedValue) => {
     setDifficulty(selectedValue);
     console.log(`Difficulty: ${selectedValue}`);
+    
   };
   const handleScoreChange = (score) => {
     let newScore = score + 1;
