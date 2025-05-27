@@ -1,0 +1,26 @@
+@import url('./styles/NavBar.css');
+@import url('./styles/PokeList.css');
+.main{
+  --primary-color: rgba(134, 255, 253, 0.626);
+  --secondary-color: gold;
+  background-color: var(--primary-color);
+  height: 90vh;
+  width: 80vw;
+  padding: 2rem 8rem;
+  /* border-radius: 2rem; */
+  overflow-y: scroll;
+  scrollbar-width:auto; /* 'auto' | 'thin' | 'none' */
+  scrollbar-color: rgb(255, 255, 255) rgba(134, 255, 253) ; /* thumb color, track color */
+}
+.background-mask{
+  background-image: url("/pokemon-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

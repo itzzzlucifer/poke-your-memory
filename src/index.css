@@ -1,0 +1,57 @@
+/* reset.css */
+
+/* Box-sizing for easier layout calculations */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding from common elements */
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dd, ol, ul, figure, figcaption, hr, fieldset, legend {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default list styles */
+ol, ul {
+  list-style: none;
+}
+
+/* Set default font styles */
+body {
+  font-family: Pokemon classic; /* Or your preferred base font */
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; /* Better font rendering on macOS */
+}
+
+/* Make images fluid */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit font styles for form elements */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Prevent text overflow */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Remove default text decoration from anchors */
+a {
+  text-decoration: none;
+  color: inherit; /* Inherit color from parent by default */
+}
+
+/* Remove default button styles */
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}

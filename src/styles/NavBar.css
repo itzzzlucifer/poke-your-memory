@@ -1,0 +1,49 @@
+.navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.game-name{
+    height: 3.5rem;
+    display: flex;
+    flex-direction: row;
+}
+.game-name>img{
+    height: 100%;
+    width: auto;
+}
+.scores{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    padding: 0.5rem 1.5rem;
+    background: rgba(0, 0, 0, 0.495);
+    border-radius: 5rem;
+}
+.current-score, .best-score{
+    margin: 0 2rem;
+}
+.current-score{
+    color: greenyellow;
+}
+.best-score{
+    color: gold;
+}
+.play-button{
+    background-color:crimson;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+    width: 50%;
+}
