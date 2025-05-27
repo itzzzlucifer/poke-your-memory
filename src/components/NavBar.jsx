@@ -1,14 +1,12 @@
-import React, { use, useState } from "react";
+import React, { useState } from "react";
+import DifficultySelector from "./DifficultySelector";
 
-function NavBar() {
-  const [score, setScore] = useState(0);
-  const [bestScore, setBestScore] = useState(0);
-  const [difficulty, setDifficulty] = useState('Easy');
-
-  function handleDifficulty(e){
-    setDifficulty(e.target.value);
-  }
-
+function NavBar({
+  score,
+  bestScore,
+  difficulty,
+  onDifficultyChange
+}) {
   return (
     <div className="navbar">
       <div className="game-name">
@@ -20,11 +18,10 @@ function NavBar() {
         <div className="best-score">Best: {bestScore}</div>
       </div>
       <div className="actions">
-        <select name="" id="" value={difficulty} onChange={handleDifficulty}>
-          <option value="Easy">Easy</option>
-          <option value="Medium">Medium</option>
-          <option value="Hard">Hard</option>
-        </select>
+        <DifficultySelector
+          value={difficulty} // Passed down from App
+          onDifficultyChange={onDifficultyChange} // Passed down from App
+        />
         <button className="play-button btn">PLAY ▶</button>
       </div>
     </div>

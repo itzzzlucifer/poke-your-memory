@@ -21,4 +21,15 @@
 .pokemon-image{
     height: 50%;
 }
-
+.pokemon-name{
+  margin: 0.75rem 0;
+}
+.pokemon-types{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.pokemon-type{
+  font-size: 0.5rem;
+  padding: 0.2rem 0.5rem;
+}
