@@ -1,8 +1,8 @@
 @import url('./styles/NavBar.css');
 @import url('./styles/PokeList.css');
 @font-face {
-  font-family: 'MyCustomFont'; /* Give your font a recognizable name */
-  src: url('/fonts/MyCustomFont.ttf') format('truetype'); /* Path relative to public folder */
+  font-family: 'Pokemon Classic'; /* Give your font a recognizable name */
+  src: url('/fonts/Pokemon Classic.ttf') format('truetype'); /* Path relative to public folder */
   font-weight: normal; /* Adjust if your font has different weights */
   font-style: normal;  /* Adjust if your font has different styles */
   font-display: swap;  /* Recommended for better performance (controls how font loads) */
