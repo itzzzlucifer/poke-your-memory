@@ -18,6 +18,11 @@
   box-shadow: slategrey 8px 8px 5px;
 
 }
+button{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 .pokemon-image{
     height: 50%;
 }
