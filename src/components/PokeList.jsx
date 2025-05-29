@@ -194,29 +194,9 @@
 // export default PokeList;
 
 import React, { useEffect, useState } from "react";
+import PokeCard from "./PokeCard";
 const url = "https://pokeapi.co/api/v2/pokemon";
-const POKEMON_TYPE_COLORS = {
-  Normal: "#A8A77A",
-  Fire: "#EE8130",
-  Water: "#6390F0",
-  Electric: "#F7D02C",
-  Grass: "#7AC74C",
-  Ice: "#96D9D6",
-  Fighting: "#C22E28",
-  Poison: "#A33EA1",
-  Ground: "#E2BF65",
-  Flying: "#A98FF3",
-  Psychic: "#F95587",
-  Bug: "#A6B91A",
-  Rock: "#B6A136",
-  Ghost: "#735797",
-  Dragon: "#6F35FC",
-  Steel: "#B7B7CE",
-  Dark: "#705746",
-  Fairy: "#D685AD",
-  Stellar: "#446294",
-  Unknown: "#68A090", // Fallback color
-};
+import { POKEMON_TYPE_COLORS } from "../data/data";
 
 async function fetchPokemonCount() {
   const response = await fetch(
@@ -307,6 +287,7 @@ function PokeList({ currentScore, currentBestScore, difficulty, onScoreChange, o
     if (clickedPokemonIds.has(pokemonId)) {
       // LOSE CONDITION: Pokemon already clicked
       console.log("Game Over! You clicked this Pokemon twice.");
+      alert("Game Over! You clicked this Pokemon twice.");
       onScoreChange(0); // Reset current score to 0
       setClickedPokemonIds(new Set()); // Clear clicked IDs
       fetchNewRandomPokemon(); // Start a new game with new Pokémon
@@ -382,34 +363,7 @@ function PokeList({ currentScore, currentBestScore, difficulty, onScoreChange, o
   return (
     <ul className="pokemon-list">
       {randomPokemon.map((pokemon) => {
-        return (
-          <li className="poke-card" key={pokemon.id}>
-            {/* Removed redundant key={pokemon.id} from button */}
-            <button onClick={() => trackScore(pokemon.id)}>
-              <img
-                className="pokemon-image"
-                src={pokemon.sprite}
-                alt={pokemon.name}
-                // Added onError for broken sprites
-                onError={(e) => { e.target.onerror = null; e.target.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/0.png"; }}
-              />
-              <span className="pokemon-name">{pokemon.name}</span>
-              <div className="pokemon-types">
-                {pokemon.types.map((type, index) => {
-                  return (
-                    <span
-                      key={index}
-                      className="pokemon-type"
-                      style={{ backgroundColor: POKEMON_TYPE_COLORS[type] || POKEMON_TYPE_COLORS.Unknown }} 
-                    >
-                      {type}
-                    </span>
-                  );
-                })}
-              </div>
-            </button>
-          </li>
-        );
+        return <PokeCard key={pokemon.id} pokemon={pokemon} trackScore={trackScore} />
       })}
     </ul>
   );
