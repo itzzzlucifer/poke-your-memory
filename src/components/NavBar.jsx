@@ -14,6 +14,7 @@ function NavBar({
         <img src="/pokeball.png" alt="pokeball image" />
       </div>
       <div className="scores">
+        <div className="author">By Prajwol Sapkota <a>https://github.com/itzzzlucifer</a></div>
         <div className="current-score">Score: {score}</div>
         <div className="best-score">Best: {bestScore}</div>
       </div>
