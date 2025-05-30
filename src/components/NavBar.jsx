@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useRef } from "react";
 import DifficultySelector from "./DifficultySelector";
 
 function NavBar({
@@ -7,6 +8,19 @@ function NavBar({
   difficulty,
   onDifficultyChange
 }) {
+  // 1. Create a ref to access the <audio> element directly in the DOM
+  // const audioRef = useRef(null);
+
+  // const playSound = () => {
+  //   if (audioRef.current) {
+  //     // 2. Play the audio
+  //     audioRef.current.play();
+
+  //     // Optional: If you want to restart the sound every time the button is clicked,
+  //     // you can reset the currentTime to 0.
+  //     audioRef.current.currentTime = 0;
+  //   }
+  // };
   return (
     <div className="navbar">
       <div className="game-name">
@@ -23,6 +37,7 @@ function NavBar({
           value={difficulty} // Passed down from App
           onDifficultyChange={onDifficultyChange} // Passed down from App
         />
+        {/* <audio ref={audioRef} src="/assets/audio/12_3.mp3" preload="auto" /> */}
         <button className="play-button btn">PLAY ▶</button>
       </div>
     </div>
