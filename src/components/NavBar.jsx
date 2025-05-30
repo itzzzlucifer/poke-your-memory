@@ -27,8 +27,8 @@ function NavBar({
         <h1>Poke Your Memory</h1>
         <img src="/pokeball.png" alt="pokeball image" />
       </div>
+      <div className="author">By Prajwol Sapkota <a href="https://github.com/itzzzlucifer" target="blank">Github</a></div>
       <div className="scores">
-        <div className="author">By Prajwol Sapkota <a href="https://github.com/itzzzlucifer" target="blank">Github</a></div>
         <div className="current-score">Score: {score}</div>
         <div className="best-score">Best: {bestScore}</div>
       </div>
